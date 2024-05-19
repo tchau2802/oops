@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="657.0" prefWidth="731.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OOP.FE.controller.MainScreenController">
+   <children>
+      <AnchorPane prefHeight="99.0" prefWidth="712.0" style="-fx-background-color: FFAAAA;">
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/LogoOOP.png" />
+               </image></ImageView>
+            <FlowPane fx:id="flowPane" hgap="13.0" layoutX="154.0" layoutY="74.0" prefHeight="22.0" prefWidth="563.0" />
+            <VBox fx:id="searchContainer" layoutX="163.0" layoutY="37.0" prefHeight="26.0" prefWidth="353.0" style="-fx-background-color: white;-fx-background-radius: 15;">
+               <children>
+                  <TextField fx:id="searchField" onKeyReleased="#search" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Text layoutX="28.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to &lt;app name&gt;">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Text>
+      <Text layoutX="26.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What do you want to do? ">
+         <font>
+            <Font name="System Italic" size="17.0" />
+         </font></Text>
+      <Text layoutX="21.0" layoutY="420.0" onMouseClicked="#handleHotTag" strokeType="OUTSIDE" strokeWidth="0.0" text="Most popular hashtags ">
+         <font>
+            <Font name="System Italic" size="16.0" />
+         </font>
+      </Text>
+      <VBox alignment="CENTER" layoutX="21.0" layoutY="313.0" prefHeight="82.0" prefWidth="690.0">
+         <children>
+            <StackPane alignment="CENTER_LEFT" prefHeight="39.0" prefWidth="543.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="472.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="20.0" />
+               </VBox.margin>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="477.0">
+               <children>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#switchToTwitter" prefHeight="45.0" prefWidth="690.0" text="View trending Tweets">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Button>
+               </children></StackPane>
+         </children>
+      </VBox>
+      <Button alignment="CENTER" layoutX="21.0" layoutY="220.0" mnemonicParsing="false" onAction="#switchToBlog" prefHeight="42.0" prefWidth="690.0" text="View NFT posts and articles">
+         <font>
+            <Font size="21.0" />
+         </font></Button>
+      <Button alignment="CENTER" layoutX="21.0" layoutY="276.0" mnemonicParsing="false" onAction="#switchToNFTMainScreen" prefHeight="45.0" prefWidth="690.0" text="View NFT collections">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <StackPane layoutX="-148.0" layoutY="462.0" prefHeight="150.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
